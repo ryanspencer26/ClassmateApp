@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         
         for student in AppData.students{
             print("\(student.toString())\n")
+            AppData.quizKey[student.name] = student.nickname
         }
         
     }
