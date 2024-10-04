@@ -20,13 +20,16 @@
                                 <rect key="frame" x="84" y="176" width="225" height="500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classmate App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTv-D2-cdp">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="29.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ba-pP-Rgo">
-                                        <rect key="frame" x="0.0" y="70.333333333333343" width="225" height="359.33333333333326"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tigerslogo" translatesAutoresizingMaskIntoConstraints="NO" id="1ba-pP-Rgo">
+                                        <rect key="frame" x="0.0" y="79.666666666666657" width="225" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="YbL-2Y-fby"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Anywhere to Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceF-lX-JwL">
                                         <rect key="frame" x="0.0" y="479.66666666666663" width="225" height="20.333333333333314"/>
@@ -139,7 +142,34 @@
                             <constraint firstItem="jQx-Gi-3Si" firstAttribute="trailing" secondItem="Xln-x3-i70" secondAttribute="trailing" constant="84" id="sTx-pi-z1W"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Student Info" id="Qco-bq-mrg"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Student Info" id="Qco-bq-mrg">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="wBZ-SE-pSW">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="onN-zQ-52x">
+                                    <rect key="frame" x="327.33333333333331" y="0.0" width="49.666666666666686" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" image="person.crop.circle.badge.plus" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <segue destination="zPQ-CD-RRk" kind="show" id="WQY-ns-I8O"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="r87-FB-J1P">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yxm-SX-0cj">
+                                    <rect key="frame" x="273.33333333333331" y="0.0" width="46" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" image="pencil" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <segue destination="wo4-x0-nds" kind="show" id="R6z-ci-p1K"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="infoView" destination="LrI-yl-hrQ" id="cwB-K6-1QK"/>
                         <outlet property="nameLabel" destination="Jcu-ou-Qc3" id="DPM-qE-2Id"/>
@@ -149,6 +179,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WQ-Ol-jiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1606.8702290076335" y="3.5211267605633805"/>
+        </scene>
+        <!--Edit Student-->
+        <scene sceneID="cNM-1P-tSh">
+            <objects>
+                <viewController id="wo4-x0-nds" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6c-EG-IiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1EZ-fS-qTe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Student" id="I0r-Ip-unS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hI3-q1-3Qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476" y="415"/>
+        </scene>
+        <!--Add Students-->
+        <scene sceneID="ach-0y-iFy">
+            <objects>
+                <viewController id="zPQ-CD-RRk" customClass="AdminViewController" customModule="ClassmateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6h8-OF-UuO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KpI-rO-dzR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Students" id="u47-ff-p6l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDS-me-AVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476" y="-223"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xpu-de-29z">
@@ -170,6 +232,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
+        <image name="tigerslogo" width="505" height="494"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
