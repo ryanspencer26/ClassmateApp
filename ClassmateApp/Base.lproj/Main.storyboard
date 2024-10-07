@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-x3-i70">
-                                <rect key="frame" x="84" y="176" width="225" height="500"/>
+                                <rect key="frame" x="84" y="184" width="225" height="500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcu-ou-Qc3">
                                         <rect key="frame" x="0.0" y="0.0" width="225" height="20.333333333333332"/>
@@ -132,43 +132,47 @@
                                     <constraint firstAttribute="height" constant="500" id="zfg-Qv-NI7"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U24-TB-YdE">
+                                <rect key="frame" x="141" y="684" width="111" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-mh-EPe">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="pencil.circle" catalog="system"/>
+                                        <connections>
+                                            <segue destination="zPQ-CD-RRk" kind="show" id="D74-9m-fNi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5a-Q9-Zem">
+                                        <rect key="frame" x="59.666666666666657" y="0.0" width="51.333333333333343" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="gear" catalog="system"/>
+                                        <connections>
+                                            <segue destination="wo4-x0-nds" kind="show" id="Ibw-DL-SAb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.333333333333343" id="keG-uE-LFT"/>
+                                    <constraint firstAttribute="width" constant="111" id="kmN-uX-zXx"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jQx-Gi-3Si"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xln-x3-i70" firstAttribute="top" secondItem="jQx-Gi-3Si" secondAttribute="top" constant="73" id="3gF-Hf-yrP"/>
-                            <constraint firstItem="Xln-x3-i70" firstAttribute="leading" secondItem="jQx-Gi-3Si" secondAttribute="leading" constant="84" id="VGe-fp-71b"/>
-                            <constraint firstItem="jQx-Gi-3Si" firstAttribute="bottom" secondItem="Xln-x3-i70" secondAttribute="bottom" constant="142" id="kxe-zD-Red"/>
-                            <constraint firstItem="jQx-Gi-3Si" firstAttribute="trailing" secondItem="Xln-x3-i70" secondAttribute="trailing" constant="84" id="sTx-pi-z1W"/>
+                            <constraint firstItem="U24-TB-YdE" firstAttribute="leading" secondItem="jQx-Gi-3Si" secondAttribute="leading" constant="141" id="4i6-h0-0ib"/>
+                            <constraint firstItem="U24-TB-YdE" firstAttribute="top" secondItem="Xln-x3-i70" secondAttribute="bottom" id="EZO-VN-tH8"/>
+                            <constraint firstItem="Xln-x3-i70" firstAttribute="leading" secondItem="jQx-Gi-3Si" secondAttribute="leading" constant="84" id="O1z-kh-UZw"/>
+                            <constraint firstItem="U24-TB-YdE" firstAttribute="top" secondItem="Xln-x3-i70" secondAttribute="bottom" id="Tpi-Fk-V9W"/>
+                            <constraint firstItem="jQx-Gi-3Si" firstAttribute="bottom" secondItem="U24-TB-YdE" secondAttribute="bottom" constant="50.670000000000002" id="YEs-cn-xiC"/>
+                            <constraint firstItem="jQx-Gi-3Si" firstAttribute="trailing" secondItem="Xln-x3-i70" secondAttribute="trailing" constant="84" id="ZrK-Sb-7YD"/>
+                            <constraint firstItem="Xln-x3-i70" firstAttribute="top" secondItem="jQx-Gi-3Si" secondAttribute="top" constant="81" id="nun-Nc-klh"/>
+                            <constraint firstItem="jQx-Gi-3Si" firstAttribute="trailing" secondItem="U24-TB-YdE" secondAttribute="trailing" constant="141" id="tZR-gk-B4l"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Student Info" id="Qco-bq-mrg">
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="wBZ-SE-pSW">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="onN-zQ-52x">
-                                    <rect key="frame" x="327.33333333333331" y="0.0" width="49.666666666666686" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" image="person.crop.circle.badge.plus" catalog="system"/>
-                                </button>
-                                <connections>
-                                    <segue destination="zPQ-CD-RRk" kind="show" id="WQY-ns-I8O"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="r87-FB-J1P">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yxm-SX-0cj">
-                                    <rect key="frame" x="273.33333333333331" y="0.0" width="46" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" image="pencil" catalog="system"/>
-                                </button>
-                                <connections>
-                                    <segue destination="wo4-x0-nds" kind="show" id="R6z-ci-p1K"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Student Info" id="Qco-bq-mrg"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="infoView" destination="LrI-yl-hrQ" id="cwB-K6-1QK"/>
@@ -232,8 +236,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <image name="tigerslogo" width="505" height="494"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

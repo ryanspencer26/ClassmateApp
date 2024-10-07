@@ -62,7 +62,7 @@ class InfoViewController: UIViewController {
     func updateScreen(){
         nameLabel.text = currentStudent.name
         infoView.text = currentStudent.toString()
-        studentImage.image = UIImage.portrait
+        studentImage.image = currentStudent.image
     }
     
 }
