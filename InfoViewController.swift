@@ -10,7 +10,6 @@ import UIKit
 class InfoViewController: UIViewController {
     
     var currentStudent: Student!
-    var currentIndex: Int!
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -23,30 +22,33 @@ class InfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        currentIndex = 0
-        currentStudent = AppData.students[currentIndex]
+        currentStudent = AppData.students[AppData.index]
         updateScreen()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateScreen()
+    }
+    
     @IBAction func next(_ sender: Any) {
-        if currentIndex < AppData.students.count-1{
-            currentIndex += 1
-            currentStudent = AppData.students[currentIndex]
+        if AppData.index < AppData.students.count-1{
+            AppData.index += 1
+            currentStudent = AppData.students[AppData.index]
         } else {
-            currentIndex = 0
-            currentStudent = AppData.students[currentIndex]
+            AppData.index = 0
+            currentStudent = AppData.students[AppData.index]
         }
         updateScreen()
     }
     
     @IBAction func previous(_ sender: Any) {
-        if currentIndex > 0 {
-            currentIndex -= 1
-            currentStudent = AppData.students[currentIndex]
+        if AppData.index > 0 {
+            AppData.index -= 1
+            currentStudent = AppData.students[AppData.index]
         } else {
-            currentIndex = AppData.students.count-1
-            currentStudent = AppData.students[currentIndex]
+            AppData.index = AppData.students.count-1
+            currentStudent = AppData.students[AppData.index]
         }
         updateScreen()
     }
@@ -54,8 +56,8 @@ class InfoViewController: UIViewController {
     @IBAction func sort(_ sender: Any) {
         
         AppData.students.sort(by: {$0.name < $1.name})
-        currentIndex = 0
-        currentStudent = AppData.students[currentIndex]
+        AppData.index = 0
+        currentStudent = AppData.students[AppData.index]
         updateScreen()
     }
     

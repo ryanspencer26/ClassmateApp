@@ -12,6 +12,7 @@ class AppData{
     static var score = 0
     static var quizKey: [String:String] = [:]
     static var students = [Student]()
+    static var index = 0
     
 }
 
