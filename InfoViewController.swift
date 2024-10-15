@@ -54,7 +54,6 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func sort(_ sender: Any) {
-        
         AppData.students.sort(by: {$0.name < $1.name})
         AppData.index = 0
         currentStudent = AppData.students[AppData.index]

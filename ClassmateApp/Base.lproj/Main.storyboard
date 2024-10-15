@@ -44,7 +44,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUB-Ee-dH4">
-                                <rect key="frame" x="147" y="684" width="100" height="35"/>
+                                <rect key="frame" x="146" y="698" width="100" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Tableview"/>
@@ -80,14 +80,79 @@
         <!--Student Table-->
         <scene sceneID="tyK-Gi-Kdn">
             <objects>
-                <viewController id="z6E-VK-h2g" sceneMemberID="viewController">
+                <viewController id="z6E-VK-h2g" customClass="TableViewController" customModule="ClassmateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bsi-00-7e5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XiO-P3-UAR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="XMd-hv-tIN" customClass="CustomCell" customModule="ClassmateApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="105.33333587646484"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XMd-hv-tIN" id="NkX-0F-X7D">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="105.33333587646484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kBR-68-Sxi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="105.33333333333333"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcy-NR-VgY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="vcL-GN-czF"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="blah blah" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-mo-lPQ">
+                                                            <rect key="frame" x="0.0" y="30.333333333333329" width="393" height="75"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="75" id="l3A-iY-LfP"/>
+                                                            </constraints>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="105" id="foN-Mv-t0h"/>
+                                                        <constraint firstAttribute="width" constant="393" id="jp7-xl-vg7"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kBR-68-Sxi" firstAttribute="leading" secondItem="NkX-0F-X7D" secondAttribute="leading" id="3aQ-aN-OMS"/>
+                                                <constraint firstAttribute="trailing" secondItem="kBR-68-Sxi" secondAttribute="trailing" id="A72-Mt-OIl"/>
+                                                <constraint firstItem="kBR-68-Sxi" firstAttribute="top" secondItem="NkX-0F-X7D" secondAttribute="top" id="fMN-TR-YNR"/>
+                                                <constraint firstAttribute="bottom" secondItem="kBR-68-Sxi" secondAttribute="bottom" id="hLh-yI-9xa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="infoView" destination="A5F-mo-lPQ" id="QO6-04-cuq"/>
+                                            <outlet property="nameLabel" destination="Pcy-NR-VgY" id="ZsN-5A-36L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tZ1-im-bHd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XiO-P3-UAR" firstAttribute="leading" secondItem="tZ1-im-bHd" secondAttribute="leading" id="Oiy-hj-7oy"/>
+                            <constraint firstItem="tZ1-im-bHd" firstAttribute="bottom" secondItem="XiO-P3-UAR" secondAttribute="bottom" id="cu9-j5-Qmw"/>
+                            <constraint firstItem="tZ1-im-bHd" firstAttribute="trailing" secondItem="XiO-P3-UAR" secondAttribute="trailing" id="fSg-Yq-tYF"/>
+                            <constraint firstItem="XiO-P3-UAR" firstAttribute="top" secondItem="tZ1-im-bHd" secondAttribute="top" id="mBG-VB-LFw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Student Table" id="Czg-Ej-lwl"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="XiO-P3-UAR" id="85Z-Hh-V5E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RG7-f1-mlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

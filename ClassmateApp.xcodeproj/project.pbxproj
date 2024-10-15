@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		806D16DF2CBE989200DFD6F7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D16DE2CBE989200DFD6F7 /* TableViewController.swift */; };
 		8097B0552CAEC5CA00E44F7D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097B0542CAEC5CA00E44F7D /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		806D16DE2CBE989200DFD6F7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8097B0542CAEC5CA00E44F7D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		80E2F0562CAD731D005D4385 /* ClassmateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassmateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E2F06F2CAD731F005D4385 /* ClassmateAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassmateAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 		80E2F04D2CAD731D005D4385 = {
 			isa = PBXGroup;
 			children = (
+				806D16DE2CBE989200DFD6F7 /* TableViewController.swift */,
 				8097B0542CAEC5CA00E44F7D /* InfoViewController.swift */,
 				80E2F0582CAD731D005D4385 /* ClassmateApp */,
 				80E2F0722CAD731F005D4385 /* ClassmateAppTests */,
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8097B0552CAEC5CA00E44F7D /* InfoViewController.swift in Sources */,
+				806D16DF2CBE989200DFD6F7 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
