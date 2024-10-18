@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801323DE2CC2951A00005AFF /* StuInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801323DD2CC2951A00005AFF /* StuInfoViewController.swift */; };
 		806D16DF2CBE989200DFD6F7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D16DE2CBE989200DFD6F7 /* TableViewController.swift */; };
 		8097B0552CAEC5CA00E44F7D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097B0542CAEC5CA00E44F7D /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		801323DD2CC2951A00005AFF /* StuInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuInfoViewController.swift; sourceTree = "<group>"; };
 		806D16DE2CBE989200DFD6F7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8097B0542CAEC5CA00E44F7D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		80E2F0562CAD731D005D4385 /* ClassmateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassmateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 		80E2F04D2CAD731D005D4385 = {
 			isa = PBXGroup;
 			children = (
+				801323DD2CC2951A00005AFF /* StuInfoViewController.swift */,
 				806D16DE2CBE989200DFD6F7 /* TableViewController.swift */,
 				8097B0542CAEC5CA00E44F7D /* InfoViewController.swift */,
 				80E2F0582CAD731D005D4385 /* ClassmateApp */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801323DE2CC2951A00005AFF /* StuInfoViewController.swift in Sources */,
 				8097B0552CAEC5CA00E44F7D /* InfoViewController.swift in Sources */,
 				806D16DF2CBE989200DFD6F7 /* TableViewController.swift in Sources */,
 			);

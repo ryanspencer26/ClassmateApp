@@ -29,5 +29,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.configure(student: AppData.students[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.index = indexPath.row
+        self.performSegue(withIdentifier: "stuInfo", sender: self)
+    }
 
 }
