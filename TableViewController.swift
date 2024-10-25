@@ -34,5 +34,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         AppData.index = indexPath.row
         self.performSegue(withIdentifier: "stuInfo", sender: self)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            AppData.students.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 
 }

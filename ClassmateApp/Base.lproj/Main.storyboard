@@ -209,6 +209,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8N5-Cc-ru7"/>
+                    <connections>
+                        <outlet property="imageOutlet" destination="GFY-Tb-Z5a" id="xfv-jL-ThD"/>
+                        <outlet property="nameLabel" destination="A6D-jC-7Jo" id="cMV-g0-Q5m"/>
+                        <outlet property="textViewOutlet" destination="wh1-DK-M2o" id="yc2-pp-faz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hD-wG-wif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
